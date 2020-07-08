@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:elevation="10dp">
+
+    <ImageView
+        android:id="@+id/iv_tb_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="13dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="ContentDescription" />
+
+    <com.example.loginpluschat.civ.CircleImageView
+        android:id="@+id/iv_tb_chat"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@+id/iv_tb_back"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="@dimen/view_height"
+        tools:src="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/tv_tb_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/iv_tb_chat"
+        android:gravity="center_vertical"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="@string/app_name" />
+</RelativeLayout>
