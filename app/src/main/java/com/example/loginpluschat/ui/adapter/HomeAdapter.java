@@ -43,6 +43,7 @@ public class HomeAdapter extends RecyclerView.Adapter {
         HomeViewHolder homeViewHolder = (HomeViewHolder) holder;
         ResponseModel userModel = mUsersList.get(position);
         homeViewHolder.tvName.setText(userModel.getName());
+//        homeViewHolder.tvName.setText("U+209X");
 
         if (userModel.getImage() != null && !userModel.getImage().isEmpty()) {
             Glide.with(mContext)
@@ -71,7 +72,6 @@ public class HomeAdapter extends RecyclerView.Adapter {
             ivCard = itemView.findViewById(R.id.iv_card);
             RelativeLayout rlClick = itemView.findViewById(R.id.rl_click);
 
-
             rlClick.setOnClickListener(v -> {
                 if (mListener != null) {
                     mListener.onItemClick(mUsersList.get(getAdapterPosition()).getId().toString());
@@ -79,5 +79,4 @@ public class HomeAdapter extends RecyclerView.Adapter {
             });
         }
     }
-
 }
